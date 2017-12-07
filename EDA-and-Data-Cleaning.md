@@ -103,7 +103,7 @@ Figure 2. **Traceplots of MMSE over Time(N=35)**
 
 
 
-#### features selection
+#### (3)features selection
 
 **Demographic features** were inspected as they are potential confounders. The distribution of three subgroups stratified by gender is visualized by the bar plot, from which we gain evidence to keep **sex** included in all models. *(Figure 3)*
 
