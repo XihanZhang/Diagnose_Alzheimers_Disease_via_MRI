@@ -11,7 +11,7 @@ title: Diagnose Alzheimer's Disease by Magnetic resonance imaging (MRI)
 
 ## Research Question
 
-Given the data sets suffer from a lot of **missing follow-up data**, we focused our main research question on building classifier models for patients? **baseline diagnosis** using patients? **brain imaging data from their first visits**, *adjusting for basic demographic information.*
+Given the data sets suffer from a lot of **missing follow-up data**, we focused our main research question on building classifier models for patients **baseline diagnosis** using patients **brain imaging data from their first visits**, *adjusting for basic demographic information.*
 
 
 
