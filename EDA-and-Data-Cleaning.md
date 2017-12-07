@@ -56,9 +56,9 @@ Then we built our **final models** based on this **compositional set**.
 
 The Adnimerge data set collected the **important features from 3 phases of the longitudinal study and 4 sections of data base** (selected by exports). Each phase applied **different protocol**, and to make sure all subjects were undergone the same protocol, we **focused our project on ADNI1**, which has the **largest amount of participant**.
 
-Adnimerge data set stores **multiple visit records for every single subject**. Since the data suffers from **a lot of missing follow-up data**, we only kept subjects’ **first visit records**, based on which to classify patients baseline diagnosis. Given the race distribution <font color = blue>(Figure 1)</font>, we find the **majority of the ADNI1 population is white**. Considering the possible obstacles (too many **complex but rare categories**; race is **highly unbalanced**) in model fitting, we decided to restrict our data set to **only White subjects** 
+Adnimerge data set stores **multiple visit records for every single subject**. Since the data suffers from **a lot of missing follow-up data**, we only kept subjects’ **first visit records**, based on which to classify patients baseline diagnosis. Given the race distribution *(Figure 1)*, we find the **majority of the ADNI1 population is white**. Considering the possible obstacles (too many **complex but rare categories**; race is **highly unbalanced**) in model fitting, we decided to restrict our data set to **only White subjects** 
 
-<font color = blue>Figure 1. **Race Composition of patiecnts in ADNI1**</font>
+Figure 1. **Race Composition of patiecnts in ADNI1**
 
 
 
@@ -79,10 +79,10 @@ shape of their MMSE trajectories. Fixed effect longitudinal model might be attem
 level coefficients extracted from the mixed effect longitudinal model will be utilized for patient
 stratification. The trajectories of MMSE over time are generated using 35 randomly selected patients.
 Due to the **imbalance and insufficient variation** in MMSE, we decided to **shelve the modeling of this
-variable.**<font color = blue>(Figure 2)</font>
+variable.** *(Figure 2)*
 
 
-<font color = blue>Figure 2. **Traceplots of MMSE over Time(N=35)**</font>
+Figure 2. **Traceplots of MMSE over Time(N=35)**
 
 
 
@@ -105,9 +105,9 @@ variable.**<font color = blue>(Figure 2)</font>
 
 #### features selection
 
-**Demographic features** were inspected as they are potential confounders. The distribution of three subgroups stratified by gender is visualized by the bar plot, from which we gain evidence to keep **sex** included in all models.<font color = blue>(Figure 3)</font>
+**Demographic features** were inspected as they are potential confounders. The distribution of three subgroups stratified by gender is visualized by the bar plot, from which we gain evidence to keep **sex** included in all models. *(Figure 3)*
 
-<font color = blue>Figure 3. **Baseline Diagnosis stratified by gender**</font>
+Figure 3. **Baseline Diagnosis stratified by gender**
 
 
 
@@ -117,9 +117,9 @@ variable.**<font color = blue>(Figure 2)</font>
 ![png](EDA-and-Data-Cleaning_files/EDA-and-Data-Cleaning_12_0.png)
 
 
-We included all the **6 features about brain images** into our initial model as the predictors of the outcome. These features include: the volume of Ventricles, Hippocampus, Whole Brain, Entorhinal, Fusiform, MidTemp. From the box plot, we can see all of them distinguish the three classes of outcome well.<font color = blue>(Figure 4)</font>
+We included all the **6 features about brain images** into our initial model as the predictors of the outcome. These features include: the volume of Ventricles, Hippocampus, Whole Brain, Entorhinal, Fusiform, MidTemp. From the box plot, we can see all of them distinguish the three classes of outcome well. *(Figure 4)*
 
-<font color = blue>Figure 4. **Distribution of MRI Brain Imaging Variables among 3 Baseline Diagnoses**</font>
+Figure 4. **Distribution of MRI Brain Imaging Variables among 3 Baseline Diagnoses**
 
 
 
@@ -129,13 +129,13 @@ We included all the **6 features about brain images** into our initial model as 
 ![png](EDA-and-Data-Cleaning_files/EDA-and-Data-Cleaning_15_0.png)
 
 
-To further investigate the **relationships of these 6 features** of interest, and the **capability of each predictor to distinguish the three classes**, we drew the **pair plot** of them<font color = blue>(Figure 5)</font>. From the plot we concluded that:
+To further investigate the **relationships of these 6 features** of interest, and the **capability of each predictor to distinguish the three classes**, we drew the **pair plot** of them *(Figure 5)*. From the plot we concluded that:
 - (1) **Hippocampus** distinguish the three levels best, followed by **Entorhinal**(however, Entorhinal does distinguish AD from NC well).
 - (2) There is **no evidence** that any 2 of the 6 features have **special interaction**.
 
 Thus, we have good reason to keep all of them.
 
-<font color = blue>Figure 5. **Initial Exploration of 6 General Brain Imaging Variables**</font>
+Figure 5. **Initial Exploration of 6 General Brain Imaging Variables**
 
 
 
@@ -162,13 +162,13 @@ We check the **collinearity among all the imaging features** in the UPENN datase
 - (1) the 114 larger structures volumes are highly correlated with the single RIOs from which the larger structures volumes are calculated 
 - (2) each pair of left and right ROIs (e.g., left hippocampus and right hippocampus) is also highly correlated. 
 
-<font color = blue>(Figure 6)</font>
+*(Figure 6)*
 
 Therefore, we **restrict our analysis on the single ROIs** and keep the **average of each left and right ROI pair**, which results in **83 imaging features.**
 
 
 
-<font color = blue>Figure 6. **A Quick Look at the Correlations among Predictors**</font>
+Figure 6. **A Quick Look at the Correlations among Predictors**
 
 
 
