@@ -151,7 +151,7 @@ Figure 5. **Initial Exploration of 6 General Brain Imaging Variables**
 ![png](EDA-and-Data-Cleaning_files/EDA-and-Data-Cleaning_18_1.png)
 
 
-### (2) UPENN - Hierarchical Parcellation of MRI using multi-atlas labeling methods *(UPENNROI_MARS_06_01_16.csv)*
+### 2. UPENN - Hierarchical Parcellation of MRI using multi-atlas labeling methods *(UPENNROI_MARS_06_01_16.csv)*
 
 We use the brain imaging features from UPENN Hierarchical Parcellation of MRI data set (UPENN). UPENN dataset only contains **Baseline MRI scans of ADNI1 participants**, so its nature fits perfectly with our project question and the processed Adnimerge dataset above.  UPENN data set includes:
 
@@ -178,7 +178,7 @@ Figure 6. **A Quick Look at the Correlations among Predictors**
 ![png](EDA-and-Data-Cleaning_files/EDA-and-Data-Cleaning_21_0.png)
 
 
-### Final Data Set
+### 3. Final Data Set
 
 Since both the two processed Adnimerge and UPENN datasets above only include subjects’ first visit record, we can easily **merge the two datasets based on the unique RID (Participant roster ID)**. 
 
